@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import AdminLink from './Link/AdminLink'
+import AgentLink from './Link/AgentLink'
+import ClientLink from './Link/ClientLink'
+import InternauteLink from './Link/InternauteLink'
+import './App.css'
+const AppRoutes=()=> {
+	if("auth_token" in localStorage){
+		if(localStorage.getItem("Role")=== "admin"){
+		    return <AdminLink/>	  
+		}
+    if(localStorage.getItem("Role")=== "client"){
+      return <ClientLink/>	  
+    }
+    if(localStorage.getItem("Role")=== "agent-maintenance"){
+      return <AgentLink/>	  
+    }
+	}
+	if (!("auth_token" in localStorage)) {
+	   return <InternauteLink/>
+	}	
+	else return null
+}
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return (  <AppRoutes/> );
 }
 
 export default App;

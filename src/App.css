@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+:root{
+    --c1:#42506B;
+    --c2:#EF4B4C;
+    --c3:#3E619B;
+    --c4:#E9E9EB;
+    --c5:#243B67;
+    --c6:#6E5DCF;
+    --c7:#C27DFC;
+    --c8:#FA4753;
+    --c9:#002855;
+    --c10:#001233;
+    --c11:#001845;
+    --c12:#0353A4;
+    --c13:#0466C8;
+    --c14:#023E7D;
+
+    --federal-blue: #03045e;
+    --marian-blue: #023e8a;
+    --honolulu-blue: #0077b6;
+    --blue-green: #0096c7;
+    --pacific-cyan: #00b4d8;
+    --vivid-sky-blue: #48cae4;
+    --non-photo-blue: #90e0ef;
+    --non-photo-blue-2: #ade8f4;
+    --light-cyan: #caf0f8;
+
+    --prussian-blue: #0b3954ff;
+    --teal: #087e8bff;
+    --columbia-blue: #bfd7eaff;
+    --bittersweet: #ff5a5fff;
+    --fire-engine-red: #c81d25ff;
+    --black-bean-2: #38040eff;
+    --rosewood: #640d14ff;
+    --falu-red: #800e13ff;
+    --auburn: #ad2831ff;
+    --blood-red: #660708ff;
+    --cornell-red: #a4161aff;
+    --cornell-red-2: #ba181bff;
+    --imperial-red: #e5383bff;
+    --silver: #b1a7a6ff;
+    --timberwolf: #d3d3d3ff;
+    --white-smoke: #f5f3f4ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* background-image: url(background-img.jpg); */
+    /* background-size: cover;
+    background-attachment: fixed; */
 }
