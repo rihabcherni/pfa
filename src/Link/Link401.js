@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes , Route} from 'react-router-dom'
-import Page401 from '../Global/pages/Error/Page401'
+import Page401 from '../interface/Error/Page401'
 
 export function Link401Client() {
   return (

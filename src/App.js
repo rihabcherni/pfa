@@ -2,7 +2,7 @@ import AdminLink from './Link/AdminLink'
 import AgentLink from './Link/AgentLink'
 import ClientLink from './Link/ClientLink'
 import InternauteLink from './Link/InternauteLink'
-import './App.css'
+import './Styles/App.css'
 const AppRoutes=()=> {
 	if("auth_token" in localStorage){
 		if(localStorage.getItem("Role")=== "admin"){

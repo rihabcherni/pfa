@@ -1,13 +1,13 @@
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import InterfaceAgent from '../utilisateur/agent-maintenance/InterfaceAgent'
-import CompteurPanne from '../utilisateur/agent-maintenance/pages/CompteurPanne'
-import DashboardAgent from '../utilisateur/agent-maintenance/pages/DashboardAgent'
-import NotificationAgent from '../utilisateur/agent-maintenance/pages/NotificationAgent'
-import InterfaceInternaute from '../utilisateur/internaute/InterfaceInternaute'
-import Page404 from '../Global/pages/Error/Page404'
-import ModifierPassword from '../Global/pages/Auth/ModifierPassword'
-import Profile from '../Global/pages/Auth/Profile'
+import InterfaceAgent from '../interface/agent-maintenance/InterfaceAgent'
+import CompteurPanne from '../interface/agent-maintenance/pages/CompteurPanne'
+import DashboardAgent from '../interface/agent-maintenance/pages/DashboardAgent'
+import NotificationAgent from '../interface/agent-maintenance/pages/NotificationAgent'
+import InterfaceInternaute from '../interface/internaute/InterfaceInternaute'
+import Page404 from '../interface/Error/Page404'
+import ModifierPassword from '../interface/Auth/ModifierPassword'
+import Profile from '../interface/Auth/Profile'
 function AgentLink() {
   return (
     <Routes>

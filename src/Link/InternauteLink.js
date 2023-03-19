@@ -1,34 +1,18 @@
 import React from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
-import Home from '../utilisateur/internaute/pages/Home'
-import Actualite from "../utilisateur/internaute/pages/Actualite";
-import FAQ from "../utilisateur/internaute/pages/FAQ";
-import Contact from "../utilisateur/internaute/pages/Contact";
-import About from "../utilisateur/internaute/pages/About";
-import Equipe from "../utilisateur/internaute/pages/Equipe";
-import Partenaires from "../utilisateur/internaute/pages/Partenaires";
-import Mission from "../utilisateur/internaute/pages/Mission";
-import Services from "../utilisateur/internaute/pages/Services";
-import Login from '../Global/pages/Auth/Login'
-import Inscription from '../Global/pages/Auth/Inscription'
-import ModifierPasswordOublier from '../Global/pages/Auth/ModifierPasswordOublier'
-import OublierPassword from '../Global/pages/Auth/OublierPassword'
-import Page404 from '../Global/pages/Error/Page404'
-import InterfaceInternaute from '../utilisateur/internaute/InterfaceInternaute'
+import { Route, Routes } from 'react-router-dom'
+import Login from '../interface/Auth/Login'
+import Inscription from '../interface/Auth/Inscription'
+import ModifierPasswordOublier from '../interface/Auth/ModifierPasswordOublier'
+import OublierPassword from '../interface/Auth/OublierPassword'
+import Page404 from '../interface/Error/Page404'
+import InterfaceInternaute from '../interface/internaute/InterfaceInternaute'
+import MainInter from '../interface/internaute/components/MainInter';
 function InternauteLink() {
- return (
-          <>
+ return(
+        <>
             <Routes>
               <Route path='/' element={<InterfaceInternaute/>}>	
-                    <Route index element={<Home/>}/>
-                    <Route path="/a-propos" element={ <About/>}/>
-                    <Route path="/actualite" element={<Actualite/>}/>
-                    <Route path="/mission" element={<Mission/>}/>
-                    <Route path="/services" element={<Services/>}/>
-                    <Route path="/partenaires" element={<Partenaires/>}/>
-                    <Route path="/equipe" element={<Equipe/>}/>
-                    <Route path="/faq" element={<FAQ/>}/>
-                    <Route path="/contact" element={<Contact/>}/>
+                    <Route index element={ <MainInter/>}/>
                     <Route path='/login' element={<Login/>}></Route>
                     <Route path='/inscription' element={<Inscription/>}></Route>
                     <Route path='/oublier-mot-de-passe' element={<OublierPassword/>}></Route>
@@ -36,7 +20,7 @@ function InternauteLink() {
               </Route>
               <Route path='*' element={<Page404/>}/>
             </Routes>
-          </> 
+        </> 
       );
 }
 export default InternauteLink

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style/Nav.css'
+import '../../../Styles/internaute/Nav.css'
 import { Link } from 'react-router-dom'
 function HeaderInter() {
   return (
@@ -19,19 +19,19 @@ function HeaderInter() {
               </label>
             </div>
             <div className="nav-links">
-                <Link to="/">Acceuil</Link>
-                <Link to="/a-propos" >A propos</Link>
-                <Link to="/actualite" >Actualité</Link>
-                <Link to="/mission" >Mission</Link>
-                <Link to="/services" >Services</Link>
-                <Link to="/partenaires" >Partenaires</Link>
-                <Link to="/faq" >FAQ</Link>
-                <Link to="/contact" >Contact</Link>
-                <button className="loginBtn"><Link to="/login" >Connexion</Link></button>
+                <a href="/">Acceuil</a>
+                <a href="/#a-propos" >A propos</a>
+                <a href="/#actualite" >Actualité</a>
+                <a href="/#mission" >Mission</a>
+                <a href="/#services" >Services</a>
+                <a href="/#partenaires" >Partenaires</a>
+                <a href="/#faq" >FAQ</a>
+                <a href="/#equipe" >Equipe</a>
+                <a href="/#contact" >Contact</a>
+                <button className="loginBtn"><a href="/login" >Connexion</a></button>
             </div>
       </div>
     </div>
   )
 }
-
 export default HeaderInter;

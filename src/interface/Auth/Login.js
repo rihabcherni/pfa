@@ -1,5 +1,5 @@
 import React , {useState} from 'react'
-import '../../styles/login.css'
+import '../../Styles/login.css'
 import LockIcon from '@mui/icons-material/Lock';
 import { Link } from 'react-router-dom';
 import { FormControl, FormHelperText, IconButton, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
