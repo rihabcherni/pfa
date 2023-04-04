@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 function Page404() {
   const navigate = useNavigate();
   let linkPagePrincipale='';
-  if(localStorage.getItem('Role')==='admin'){
+  if(localStorage.getItem('Role')==='administrateur'){
     linkPagePrincipale='/admin'
   }else if(localStorage.getItem('Role')==='client'){
     linkPagePrincipale='/client'

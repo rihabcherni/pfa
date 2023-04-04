@@ -2,7 +2,7 @@ import React from 'react'
 
 function Equipe() {
   return (
-    <div id='equipe'>
+    <div id='equipe' className='inter-section'>
       <h1 className='title-internaute'>Notre équipe</h1> 
         Nous sommes une équipe passionnée et engagée dans la mise en place de solutions intelligentes pour la gestion de l'énergie électrique. Nous avons des compétences variées dans les domaines de l'ingénierie, de la gestion de projet, de la communication et du marketing.
 

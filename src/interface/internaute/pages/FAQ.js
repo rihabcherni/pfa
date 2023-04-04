@@ -1,7 +1,7 @@
 import React from 'react'
 function FAQ() {
   return (
-    <div id='faq'>
+    <div id='faq' className='inter-section'>
       <h1 className='title-internaute'>FAQ</h1> 
       Retrouvez les réponses aux questions les plus 
       fréquentes sur la gestion intelligente de l'électricité 

@@ -20,8 +20,8 @@ function ClientLink() {
         <Route path="facture" element={ <Facture/>}/>
         <Route path="notification" element={ <NotificationClient/>}/>
         <Route path="reclamation" element={ <ReclamationClient/>}/>
-        <Route path='/modifier-mot-de-passe' element={<ModifierPassword/>}></Route>
-        <Route path='/profile' element={<Profile/>}></Route>
+        <Route path='modifier-mot-de-passe' element={<ModifierPassword/>}></Route>
+        <Route path='profile' element={<Profile/>}></Route>
       </Route>
       <Route path='*' element={<Page404/>}/>
       {/* <Route path='*' element={<div><Navigate replace to="/page-404" /><Page404/> </div>}/> */}

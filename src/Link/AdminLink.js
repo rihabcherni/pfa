@@ -26,8 +26,8 @@ function AdminLink() {
         <Route path="liste-consommation-optimale" element={ <ListeConsommationOptimale/>}/>
         <Route path="reclamation" element={ <ListeReclamation/>}/>
         <Route path="notification" element={ <NotificationAdmin/>}/>
-        <Route path='/modifier-mot-de-passe' element={<ModifierPassword/>}></Route>
-        <Route path='/profile' element={<Profile/>}></Route>
+        <Route path='modifier-mot-de-passe' element={<ModifierPassword/>}></Route>
+        <Route path='profile' element={<Profile/>}></Route>
       </Route>
    
       <Route path='*' element={<Page404/>}/>
