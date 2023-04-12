@@ -9,147 +9,115 @@
         text-align: center;
     }
     .inter-section{
-        height: 95.5vh;
+        height: 100vh;
         scroll-snap-align: start;
         display:flex;
         flex-direction:column;
-        padding: 5%;
-        font-size:18px;
+        font-size: 1.2em;
+        font-weight: 700;
+        line-height: 25px;
+        padding-top: 5%;
     }
 /*                         acceuil                     */
     #accueil{
-        padding-left: 0;
-        padding-right: 0;   
+      padding-left: 0;
+      padding-right: 0; 
+      padding-bottom: 0;
+      flex-grow: 1;
     }
-    /* .container-carousel {
-        position: relative;
-        text-align: center;
-        color: white;
-    }
-    .container-carousel img{
-        width: 100%;
-        padding:0;
-        margin:0;
-    }
-    .container-carousel .text-carousel {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    } */
 
-    .featured {
-        height: 100vh;
-        width: 100%;
+    .container-carousel {
         position: relative;
-        z-index: 1;
-        overflow: hidden;
-      }
-      .featured .image {
-        position: absolute;
-        z-index: -1;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      
-      .data-content {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        background: linear-gradient(to left, transparent 0%, rgb(0, 0, 0, 0.7) 50%);
-        width: 100%;
-        height: 100%;
-        color: white;
-        justify-content: center;
-      }
-      .left-content {
-        padding-right: 400px;
-        display: flex;
-        flex-direction: column;
-      }
-      .buttons {
-        display: flex;
-        flex-direction: row;
-      }
-      .title {
-        color: white;
-        font-size: 50px;
-        margin-bottom: 25px;
-      }
-      .play {
-        display: flex;
-        width: 150px;
-        height: 40px;
-        border: none;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        transition: ease-in 0.3s all;
-        margin-right: 8px;
-      }
-      .play:hover {
-        background: #50cfb7;
-      }
-      .Trailer {
-        display: flex;
-        width: 150px;
-        height: 40px;
-        border: none;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        transition: ease-in 0.3s all;
-      }
-      .Trailer:hover {
-        background: #50cfb7;
-      }
-      .close-video {
-        position: absolute;
-        z-index: 2;
-        bottom: 10px;
-        left: 10px;
-      }
-      
-      .youtube-container {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-      }
-      @media only screen and (max-width: 1000px) {
-        .left-content {
-          padding-right: 50px;
-        }
-      }
-      
+        color: rgb(4, 43, 79);
+        height: 89.7vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .center-carousel{
+      z-index: 1;
+      position: absolute;
+      width: 50%;
+      top: 30%;
+      left: 8%;
+      transform: translate(-8%, -30%);
+    }
+    .title-acceuil{
+      text-align: left;
+      color:blue;
+      margin-bottom: 40px;
+    }
 /*                         a propos                    */
     #a-propos{
-        background-color: green;
+        padding: 4%;
     }
+    .container-propos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+    }
+    .container-texte{
+        display: block;
+        font-size: 1em;
+    }
+     .container-propos img{
+        width: 95%;
+        display: inline-block;
+        margin-top: -30px
+     }
 /*                         Actualité                   */
-    .container-actualite{
-        display:grid;
-        grid-template-columns: 45% 55%;
-    }
-    .img-act{
-        width:100%;
-        margin-top:-40px;
-    }
+#actualite{
+    padding: 4%;
+}
+.container-actualite{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2%;
+    margin-top: 70px
+   }
+
+ .img-act{
+    width: 95%;
+    display: inline-block;
+    margin-top: -70px
+ }
+
 /*                         Mission                     */
+    #mission{
+        padding: 4%;
+    }
+    .container-mission{
+        display: grid;
+
+    }
 /*                         Services                    */
 /*                         Partenaires                 */
 /*                         FAQ                         */
 /*                         Equipe                      */
+    #equipe{
+        padding: 4%;
+        font-size: 0.9em;
+    }
+    .equipe-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 4%;
+    }
 /*                         Contact                     */
     #contact{
-        height: 100vh;   
+        height: 100vh;  
+        padding: 5%; 
     }
-
-
-
+    .container-contact{
+        margin: 2% 1% ;
+        display: grid;
+        grid-template-columns: 45% 50%;
+        gap: 2%;
+    }
+    .contact-liste{
+        font-size: 14px;
+        margin-left: 20px;
+        list-style: none;
+    }
 
 
 

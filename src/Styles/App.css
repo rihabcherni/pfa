@@ -1,5 +1,6 @@
 :root{
-    --c1:#42506B;
+  --main-color: #1976d2;
+    /* --c1:#42506B;
     --c2:#EF4B4C;
     --c3:#3E619B;
     --c4:#E9E9EB;
@@ -39,7 +40,10 @@
     --imperial-red: #e5383bff;
     --silver: #b1a7a6ff;
     --timberwolf: #d3d3d3ff;
-    --white-smoke: #f5f3f4ff;
+    --white-smoke: #f5f3f4ff; */
+}
+a{
+  text-decoration: none;
 }
 *{
     margin: 0;
@@ -48,7 +52,7 @@
     font-family: "Poppins", sans-serif;
 }
 body{
-    background: #e3f2fd;
+    background: #ffffff;
     min-height: 100vh;
 }
 ::-webkit-scrollbar {

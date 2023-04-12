@@ -1,13 +1,12 @@
-import React from 'react'
-import { Outlet} from 'react-router-dom';
+import React from "react";
 
-function InterfaceAdmin() {
+import { SidebarAdmin } from "./components/SidebarAdmin";
+import InterfaceUser from "../Global/InterfaceUser";
+
+export default function InterfaceAdmin() {
+
+
   return (
-    <div>
-      interface admin
-      <Outlet/>
-    </div>
-  )
+    <InterfaceUser SidebarUser={SidebarAdmin} />
+  );
 }
-
-export default InterfaceAdmin

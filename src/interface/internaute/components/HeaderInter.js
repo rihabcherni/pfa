@@ -1,13 +1,18 @@
 import React from 'react'
 import '../../../Styles/internaute/Nav.css'
-import { Link } from 'react-router-dom'
+import Logo from '../../../assets/logo.PNG'
+
+import { Link, useLocation } from 'react-router-dom'
 function HeaderInter() {
+  const location = useLocation();
+  if(true)
+  console.log(location)
   return (
     <div>
       <div className="navbar">
          <div className="nav-header">
             <div className="nav-logo">
-            <Link to="/"><img src="logo.png" width="100px" alt="logo"/>EESG</Link>
+            <Link to="/"><img src={Logo} width="87px" alt="logo"/></Link>
             </div>
           </div>
             <input type="checkbox" id="nav-check"/>
@@ -19,15 +24,15 @@ function HeaderInter() {
               </label>
             </div>
             <div className="nav-links">
-                <a href="/">Acceuil</a>
-                <a href="/#a-propos" >A propos</a>
-                <a href="/#actualite" >Actualité</a>
-                <a href="/#mission" >Mission</a>
-                <a href="/#services" >Services</a>
-                <a href="/#partenaires" >Partenaires</a>
-                <a href="/#faq" >FAQ</a>
-                <a href="/#equipe" >Equipe</a>
-                <a href="/#contact" >Contact</a>
+                <a className={location.hash === '' ? 'active' : ''} href="/">Acceuil</a>
+                <a className={location.hash === '#a-propos' ? 'active' : ''} href="/#a-propos" >A propos</a>
+                <a className={location.hash === '#actualite' ? 'active' : ''} href="/#actualite" >Actualité</a>
+                <a className={location.hash === '#mission' ? 'active' : ''} href="/#mission" >Mission</a>
+                <a className={location.hash === '#services' ? 'active' : ''} href="/#services" >Services</a>
+                <a className={location.hash === '#partenaires' ? 'active' : ''} href="/#partenaires" >Partenaires</a>
+                <a className={location.hash === '#faq' ? 'active' : ''} href="/#faq" >FAQ</a>
+                <a className={location.hash === '#equipe' ? 'active' : ''} href="/#equipe" >Equipe</a>
+                <a className={location.hash === '#contact' ? 'active' : ''} href="/#contact" >Contact</a>
                 <button className="loginBtn"><a href="/login" >Connexion</a></button>
             </div>
       </div>

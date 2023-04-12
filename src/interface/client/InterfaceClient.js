@@ -1,13 +1,12 @@
-import React from 'react'
-import { Outlet} from 'react-router-dom';
+import React from "react";
 
-function InterfaceClient() {
+import { SidebarClient } from "./components/SidebarClient";
+import InterfaceUser from "../Global/InterfaceUser";
+
+export default function InterfaceClient() {
+
+
   return (
-    <div>
-      cleintttttttttttttttttt
-      <Outlet/>
-    </div>
-  )
+    <InterfaceUser SidebarUser={SidebarClient} />
+  );
 }
-
-export default InterfaceClient;

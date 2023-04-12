@@ -1,12 +1,9 @@
-import React from 'react'
-import { Outlet} from 'react-router-dom';
+import React from "react";
+import { SidebarAgentMaintenance } from "./components/SidebarAgentMaintenance";
+import InterfaceUser from "../Global/InterfaceUser";
 
-function InterfaceAgent() {
+export default function InterfaceAgent() {
   return (
-    <div>
-      
-    </div>
-  )
+    <InterfaceUser SidebarUser={SidebarAgentMaintenance} />
+  );
 }
-
-export default InterfaceAgent

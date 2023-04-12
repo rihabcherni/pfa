@@ -1,11 +1,9 @@
 import React from 'react'
 
-function Page401() {
+export default function Support() {
   return (
     <div>
-            Page401
+      Support
     </div>
   )
 }
-
-export default Page401
