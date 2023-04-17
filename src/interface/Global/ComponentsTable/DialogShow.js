@@ -30,14 +30,14 @@ const BootstrapDialogTitle = (props) => {
   );
 };
 BootstrapDialogTitle.propTypes = { children: PropTypes.node, onClose: PropTypes.func.isRequired,};
-export default function DialogZoneTravailShow({tableName,open,handleClose,data, show}) {
+export default function DialogShow({tableName,open,handleClose,data, show,nom}) {
 
   let rows = [];
   for (let i = 0; i < show.length; i++) {
     if(show[i][0]==="photo"){
       rows.push(
         <img style={{height:"200px", width:"200px", borderRadius:"50%"}} 
-        src={`${process.env.REACT_APP_API_KEY}/storage/images/${data[show[i][0]]}`} alt="images"/>
+        src={`${process.env.REACT_APP_API_KEY}/images/${nom}/${data[show[i][0]]}`} alt="images"/>
       );
     }
   }

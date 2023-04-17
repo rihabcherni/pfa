@@ -1,16 +1,17 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../../../Styles/internaute/Footer.css'
-import { faYoutube , faGoogle, faFacebookF} from '@fortawesome/free-brands-svg-icons'
+import logo from '../../../assets/logo.PNG'
 import { faEnvelope, faMap, faPhone , faFax} from '@fortawesome/free-solid-svg-icons';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { faFacebookF, faGoogle, faYoutube } from '@fortawesome/free-brands-svg-icons';
 function FooterInter() {
   return (
     <footer>
               <div className="footerSection">
             <div className='logo-footer'>
-                    {/* <img src={logo} alt="logo image" className='logo'/> */}
                     <p className='title-logo-footer'> SMART WATTS</p>
+                    <img src={logo} alt="logo image" className='logo'/>
             </div>
 
             <div className='section'>
@@ -43,11 +44,11 @@ function FooterInter() {
                   <li><FontAwesomeIcon icon={faEnvelope} className="icon"  /><b>Email :</b> dpsc@steg.com.tn</li> 
                 </div>
                 <div className="wrapper">
-                  {/* <ul>
+                  <ul>
                     <li className="facebook"><a className="facebook" to="https://www.facebook.com/RESCHOOL.EDUCATION"><FontAwesomeIcon icon={faFacebookF} className='fa fa-facebook'/></a></li>                 
                     <li className="youtube"><a href=" https://www.youtube.com/channel/UCVz1D9WyNVZAFCB6cxqpDGQ"><FontAwesomeIcon icon={faYoutube} className='fa fa-youtube'/></a></li>                 
                     <li className="google"><a href="https://reschoolwethink.education/"><FontAwesomeIcon icon={faGoogle} className='fa fa-google'/></a></li>                 
-                  </ul> */}
+                  </ul>
                 </div>
             </div>
             <div className='scroll-icon'>

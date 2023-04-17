@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+import 'ag-grid-community/styles/ag-grid.css';
+import 'ag-grid-community/styles/ag-theme-alpine.css';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import '../../App.css'
 import { Table} from './Table'
 import {ButtonTable} from '../../style'
 import DialogShow from './DialogShow';

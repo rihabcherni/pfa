@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import logo from '../../../assets/logo.svg'
 import loginImg from '../../../assets/user/internaute/login.jpg'
 axios.defaults.baseURL = `${process.env.REACT_APP_API_KEY}/api`;
+axios.defaults.withCredentials = true;
 
 const Login = () => {
   const [loginRecaptcha, setLoginRecaptcha] = useState("");
@@ -44,6 +45,7 @@ const Login = () => {
         localStorage.setItem("auth_token", response.data.token);
         localStorage.setItem('Role',role);
         axios.defaults.headers.common["Authorization"] = `Bearer ${response.data.token}`;
+        axios.defaults.headers.common["Content-Type"] = `application/json`;
         window.location.reload();  
         navigate("/"+role);
         Swal('Success',response.data.message,"success");
@@ -119,7 +121,7 @@ const Login = () => {
                 </FormControl>
                 <br/>
                 <FormControl fullWidth sx={{ marginTop: 2 }} variant="outlined" color="success" >
-                  <ReCAPTCHA sitekey='6Ld4vbMgAAAAAMKnTX3uhIXnHmrEm6CyzoPBSIJq' onChange={onChange}  />          
+                  <ReCAPTCHA sitekey='6LcApHsfAAAAAHz09e3JvjZHKzd-8xV4d3BhmeQH' onChange={onChange}  />          
                   <OutlinedInput id="recaptcha" type='text' name="recaptcha" value={loginInput.recaptcha=loginRecaptcha}
                       onChange={handleInput} 
                       startAdornment={<InputAdornment position="start"><PersonIcon/></InputAdornment> }  

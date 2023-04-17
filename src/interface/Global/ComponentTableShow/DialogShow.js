@@ -30,7 +30,7 @@ const BootstrapDialogTitle = (props) => {
   );
 };
 BootstrapDialogTitle.propTypes = { children: PropTypes.node, onClose: PropTypes.func.isRequired,};
-export default function DialogZoneTravailShow({tableName,open,handleClose,data, show}) {
+export default function DialogShow({nom,tableName,open,handleClose,data, show}) {
 
   let rows = [];
   for (let i = 0; i < show.length; i++) {

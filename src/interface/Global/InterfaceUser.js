@@ -75,7 +75,12 @@ export default function InterfaceUser({SidebarUser}) {
                                   <span style={{fontSize:"16px"}} >SMART WATTS </span>
                                   <IconButton onClick={handleDrawerClose}><MenuIcon sx={{ fontSize: 25 }}/></IconButton>
                                 </div>
-                            <List> {SidebarUser.map(lien=> <><MenuItem key={lien.id} item={lien} open={open}/></>)}</List>
+                            <List>{SidebarUser.map((lien) => (
+                                    <div key={lien.id}>
+                                      <MenuItem item={lien} open={open}/>
+                                    </div>
+                                  ))}
+                            </List>
                     </Drawer>              
                         <Box component="main" sx={{ flexGrow: 1,p:2}}>
                           <div style={{ marginTop:"50px" }}>
