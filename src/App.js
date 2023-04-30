@@ -5,6 +5,9 @@ import InternauteLink from './Link/InternauteLink'
 import './Styles/App.css';
 import './assets/fonts/Anuphan-Light.ttf';
 const AppRoutes=()=> {
+	if (window.location.href.includes("http://localhost:3000")){
+		window.location.replace("http://127.0.0.1:3000","http://localhost:3000");
+	}
 	if("auth_token" in localStorage){
 		if(localStorage.getItem("Role")=== "administrateur"){
 		    return <AdminLink/>	  

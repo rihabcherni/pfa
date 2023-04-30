@@ -14,11 +14,10 @@ function Actualite() {
             <br/>
             <p>Nous publions régulièrement des articles et des études de cas pour vous informer sur les dernières tendances
             en matière d'énergie et pour vous donner des conseils pratiques pour optimiser votre consommation d'énergie.</p>
-           <Button type='submit' variant="contained" sx={{marginTop:"15px"}}>
-                <Typography variant="button" style={{textTransform: 'capitalize'}}>
-                Voir plus...
-                </Typography>
-              </Button>
+            <br/>
+            <Button type='submit' variant="contained" sx={{ padding:"10px 30px" }}>
+              <Typography variant="button" style={{textTransform: 'capitalize'}}>Voir plus...</Typography>
+            </Button>
           </div>
           <div>
             <img src={ImgActualite} alt="actualite image" className="img-act"/>

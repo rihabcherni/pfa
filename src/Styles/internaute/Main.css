@@ -13,10 +13,9 @@
         scroll-snap-align: start;
         display:flex;
         flex-direction:column;
-        font-size: 1.2em;
-        font-weight: 700;
-        line-height: 25px;
         padding-top: 5%;
+        font-size: 1.2em;
+        line-height: 1.6;
     }
 /*                         acceuil                     */
     #accueil{
@@ -57,7 +56,6 @@
     }
     .container-texte{
         display: block;
-        font-size: 1em;
     }
      .container-propos img{
         width: 95%;
@@ -70,32 +68,54 @@
 }
 .container-actualite{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 2%;
-    margin-top: 70px
+    grid-template-columns: 45% 55%;
+    gap: 3%;
+    margin-top: 30px
    }
 
  .img-act{
     width: 95%;
     display: inline-block;
-    margin-top: -70px
+    margin-top: -50px
  }
 
 /*                         Mission                     */
-    #mission{
+    #mission-objectifs{
         padding: 4%;
     }
-    .container-mission{
+    .mission-container{
         display: grid;
-
+        grid-template-columns: repeat(2,1fr);
+        gap:50px
     }
 /*                         Services                    */
+    #services{
+        padding: 4%;
+    }
 /*                         Partenaires                 */
+    #partenaires{
+        padding: 4%;
+    }
+    .partenaire-container{
+        display: grid;
+        grid-template-columns:45% 50%;
+        gap: 5%;
+    }
+    .contanier-partenaires-img{
+        margin: 20px ;
+        margin-top: -20px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+
 /*                         FAQ                         */
+    #faq{
+        padding: 4%;
+    }
 /*                         Equipe                      */
     #equipe{
         padding: 4%;
-        font-size: 0.9em;
     }
     .equipe-container{
         display: grid;

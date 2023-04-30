@@ -22,7 +22,7 @@ export const Item = styled(Paper)(({ theme }) =>
       ...theme.typography.body2,
       padding: theme.spacing(1),
       textAlign: 'center',
-      color: theme.palette.text.secondary, display:'grid', gridTemplateColumns:"repeat(4,1fr)",
+      color: theme.palette.text.secondary, display:'grid', gridTemplateColumns:"repeat(3,1fr)",
       '@media (max-width: 800px)' : {
         display:"grid",
         gridTemplateColumns:"repeat(2,1fr)",
@@ -35,9 +35,9 @@ export const Item1 = styled(Paper)(({ theme }) =>
   ( {
       backgroundColor: theme.palette.mode === 'dark' ? '#f0f0f0' : '#f0f0f0',
       ...theme.typography.body2,
-      padding: theme.spacing(1),
       textAlign: 'center',
-      color: theme.palette.text.secondary, display:'grid', gridTemplateColumns:"10% 90%",
+      color: "lightblue", 
+      margin:25,
     }
   )
 );
@@ -67,7 +67,7 @@ export const columnTypes =  {
    },
  },
 }
-export  function Table({ tableNamePlu,handleClickOpen ,handleClickOpenTrash,tableData, columnDefs, url}) {   
+export  function Table({ tableNamePlu,handleClickOpen ,tableData, columnDefs, url}) {   
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -100,12 +100,11 @@ export  function Table({ tableNamePlu,handleClickOpen ,handleClickOpenTrash,tabl
   }, []);
   const onPaginationChange=(pageSize)=>{gridApi.api.paginationSetPageSize(Number(pageSize)) }
 return (
-  <div style={{ boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}>
+  <div style={{ boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', padding:"0 10px"}}>
       <Grid  wrap="nowrap" container direction="row" justifyContent="space-between" alignItems="flex-start" >
-          <Item1  style={{margin:"20px 10px ",backgroundColor:'#DCDCDC'}}>
-            <ManageSearchIcon variant="contained" color="success"  style={{marginBottom:"-5px"}} />
+          <Item1>
             <input type="text"  onInput={onQuickFilterChanged}  id="quickFilter"  placeholder="recherche..."  
-              style={{backgroundColor:'#DCDCDC', border:'none',padding:"8px" }}/>
+              style={{backgroundColor:'#DCDCDC', border:'none',padding:"10px 30px"}}/>
           </Item1>      
           <Typography align="center" variant='h4' color="primary" sx={{margin:"25px 0", fontWeight:"bold"}}>{tableNamePlu}</Typography>
           <Item  style={{margin:"20px 10px",backgroundColor:'#DCDCDC'}}>
@@ -133,7 +132,6 @@ return (
                 </Menu>
               </div>
               <Button variant="contained" color="success" sx={{ marginLeft:"5px" }} onClick={handleClickOpen}><AddIcon/></Button>
-              <Button variant="contained" color="error" sx={{ marginLeft:"5px" }} onClick={handleClickOpenTrash}><AutoDeleteIcon/></Button>
           </Item>
       </Grid>
       <div className="ag-theme-material" style={{ height: '415px',width:"100%"}}>

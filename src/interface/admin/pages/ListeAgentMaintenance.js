@@ -8,7 +8,6 @@ import Api from '../../Global/ComponentsTable/Api';
   ["Numéro télèphone","numero_telephone"],
   ["E-mail","email"],
   ["Mot de passe","mot_de_passe"],
-  ["Adresse","adresse"],
   ["photo","photo"],
  ];
  const show=[
@@ -19,14 +18,13 @@ import Api from '../../Global/ComponentsTable/Api';
   ["Numéro télèphone","numero_telephone"],
   ["E-mail","email"],
   ["Mot de passe","mot_de_passe"],
-  ["Adresse","adresse"],
   ["photo","photo"],
   ["Crée le","created_at"],
   ["Modifié le","updated_at"],
  ];
 export default function ListeAgentMaintenance() {
   const initialValue = { nom: "", prenom: "", numero_telephone: "", 
-  email: "", mot_de_passe:"", adresse:"",created_at:"", updated_at:"", error_list:[]};
+  email: "", mot_de_passe:"",created_at:"", updated_at:"", error_list:[]};
   const url = `http://127.0.0.1:8000/api/agent-maintenance`
   const columnDefs = [
     { headerName: "ID", field: "id",  maxWidth:100,minWidth:80, pinned: 'left' },
@@ -38,11 +36,10 @@ export default function ListeAgentMaintenance() {
     { headerName: "CIN ", field: "CIN", minWidth: 120 , maxWidth: 180 },
     { headerName: "Télèphone", field: "numero_telephone" , minWidth: 140 , maxWidth: 200 },
     { headerName: "E-mail", field: "email", minWidth: 200 , maxWidth: 300  },
-    { headerName: "Adresse", field: "adresse", minWidth: 150 , maxWidth: 400 },
   ]
   return (
     <div style={{width:"100%"}}>
-        <Api nom='agentMaintenance' tableNamePlu='Liste agents maintenance' tableNameSing='Liste agents maintenance' url={url} initialValue={initialValue} columnDefs={columnDefs} columnDefsTrash={columnDefs}  show={show} createUpdate={createUpdate}/>  
+        <Api nom='agentMaintenance' tableNamePlu='Liste agents maintenance' tableNameSing='Liste agents maintenance' url={url} initialValue={initialValue} columnDefs={columnDefs}  show={show} createUpdate={createUpdate}/>  
     </div>
   );
 }

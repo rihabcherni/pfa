@@ -21,7 +21,7 @@ function FooterInter() {
                     <a className="footerLink" href="/">Acceuil</a>
                     <a className="footerLink" href="/#a-propos" >A propos</a>
                     <a className="footerLink" href="/#actualite" >Actualité</a>
-                    <a className="footerLink" href="/#mission" >Mission</a>
+                    <a className="footerLink" href="/#mission-objectifs" >Mission et Objectifs</a>
                     <a className="footerLink"href="/#services" >Services</a>
                   </div>
                   <div>

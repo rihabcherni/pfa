@@ -5,8 +5,6 @@ import Logo from '../../../assets/logo.PNG'
 import { Link, useLocation } from 'react-router-dom'
 function HeaderInter() {
   const location = useLocation();
-  if(true)
-  console.log(location)
   return (
     <div>
       <div className="navbar">
@@ -27,7 +25,7 @@ function HeaderInter() {
                 <a className={location.hash === '' ? 'active' : ''} href="/">Acceuil</a>
                 <a className={location.hash === '#a-propos' ? 'active' : ''} href="/#a-propos" >A propos</a>
                 <a className={location.hash === '#actualite' ? 'active' : ''} href="/#actualite" >Actualité</a>
-                <a className={location.hash === '#mission' ? 'active' : ''} href="/#mission" >Mission</a>
+                <a className={location.hash === '#mission-objectifs' ? 'active' : ''} href="/#mission-objectifs" >Mission et Objectifs</a>
                 <a className={location.hash === '#services' ? 'active' : ''} href="/#services" >Services</a>
                 <a className={location.hash === '#partenaires' ? 'active' : ''} href="/#partenaires" >Partenaires</a>
                 <a className={location.hash === '#faq' ? 'active' : ''} href="/#faq" >FAQ</a>

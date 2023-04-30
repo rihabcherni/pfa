@@ -1,7 +1,14 @@
 import React , {useState , useEffect} from 'react'
 import Carousel from 'react-material-ui-carousel'
+import m1 from '../../../assets/user/internaute/equipe/m1.jpg'
+import m2 from '../../../assets/user/internaute/equipe/m2.jpg'
+import m3 from '../../../assets/user/internaute/equipe/m3.jpg'
+import w1 from '../../../assets/user/internaute/equipe/w1.jpg'
+import w2 from '../../../assets/user/internaute/equipe/w2.jpeg'
+import w3 from '../../../assets/user/internaute/equipe/w3.PNG'
 const data=[
   {
+    img:m3,
     travail : "Directeur général",
     nom : " Ahmed Ben Ali",
     formation : "Ingénieur en Énergie",
@@ -9,6 +16,7 @@ const data=[
     resp : "Supervision générale des opérations de la STEG",
   },
   {
+    img:w1,
     travail : "Responsable des opérations techniques",
     nom : "Fatma Ben Ammar",
     formation : "Ingénieur en Énergie",
@@ -16,6 +24,7 @@ const data=[
     resp : "Supervision des opérations quotidiennes et de la maintenance des infrastructures de la STEG",
   },
   {
+    img:m1,
     travail : "Responsable des finances ",
     nom : "Mohamed Nasri",
     formation : "Diplôme en Finance",
@@ -23,6 +32,7 @@ const data=[
     resp : "Gestion des finances de la STEG, y compris la comptabilité, les budgets et la planification financière",
   },
   {
+    img:w2,
     travail : "Responsable des ressources humaines",
     nom : "Amina Ben Ahmed",
     formation : "Diplôme en Ressources Humaines",
@@ -30,13 +40,15 @@ const data=[
     resp : "Responsabilités: Gestion des politiques de ressources humaines de la STEG, y compris le recrutement, la formation et le développement des employés",
   },
   {
+    img:m2,
     travail : "Responsable de la planification stratégique",
     nom : "Omar Mansour",
     formation : "Master en Administration des Affaires",
     experience : "Plus de 10 ans dans la planification stratégique",
     resp : "Développement de la stratégie d'entreprise de la STEG, y compris la planification à long terme et la mise en œuvre des objectifs stratégiques",
   },
-   {
+  {
+    img:w3,
     travail : "Responsable de la communication",
     nom : "Nadia Ben Said",
     formation : "Diplôme en communication",
@@ -45,22 +57,18 @@ const data=[
   }
 ];
 function Equipe() {
-  const [produit, setProduit] = useState(data);
-
-  if (produit !== null) {
-    const sliderItems = produit.length > 3 ? 3 : produit.length;
+    const sliderItems = data.length > 3 ? 3 : data.length;
     const items = [];
-
-    for (let i = 0; i < produit.length; i += sliderItems) {
+    for (let i = 0; i < data.length; i += sliderItems) {
       if (i % sliderItems === 0) {
         items.push(
           <div className='equipe-container' key={i.toString()}>
-            {produit.slice(i, i + sliderItems).map((da, index) => {
+            {data.slice(i, i + sliderItems).map((da, index) => {
               return (
               <div className='card' key={index.toString()} item={da}>
-                <h3>Responsable de la planification stratégique</h3>
+                <h3>{da.travail}</h3>
                 <ul>
-                <img src={`./${da.photo}`} style={{ height: '200px', width: '200px' }} alt={`${da.nom}`} />
+                <img src={da.img} style={{ height: '200px', width: '200px' }} alt={`${da.nom}`} />
                 <li>Nom:  {da.nom}</li>
                     <li>Formation:  {da.formation}</li>
                     <li>Expérience professionnelle:  {da.experience}</li>
@@ -73,18 +81,13 @@ function Equipe() {
         );
       }
     }
-
     return (
       <div id='equipe' className='inter-section'>
          <h1 className='title-internaute'>Notre équipe</h1> 
          Nous sommes une équipe passionnée et engagée dans la mise en place de solutions intelligentes pour la gestion de l'énergie électrique. Nous avons des compétences variées dans les domaines de l'ingénierie, de la gestion de projet, de la communication et du marketing.
-         <h2>Nos membres</h2>
         <Carousel indicators={false}>
           {items}
         </Carousel>
-        <h2>Nos valeurs</h2>
-        Nous croyons en la durabilité et en l'efficacité énergétique comme moyen de préserver l'environnement et de promouvoir une utilisation responsable de l'énergie électrique. Nous sommes déterminés à fournir des solutions innovantes et efficaces pour répondre aux besoins de nos clients tout en préservant les ressources naturelles.
-
         <h2>Joindre notre équipe</h2>
         Si vous partagez nos valeurs et notre passion pour l'innovation et la durabilité, nous sommes intéressés à entendre parler de vous. Consultez notre page "Carrières" pour voir nos offres d'emploi actuelles et soumettez votre candidature.
  
@@ -92,7 +95,4 @@ function Equipe() {
       </div>
       
     );
-  } else {
-    return <></>;
-  }
 }export default Equipe;

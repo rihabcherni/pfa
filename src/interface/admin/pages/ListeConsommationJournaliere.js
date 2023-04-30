@@ -24,7 +24,7 @@ import Api from '../../Global/ComponentsTable/Api';
  ];
 export default function ListeConsommationJournaliere() {
   const initialValue = { nom: "", prenom: "", numero_telephone: "", 
-  email: "", mot_de_passe:"", adresse:"",created_at:"", updated_at:"", error_list:[]};
+  email: "", mot_de_passe:"",created_at:"", updated_at:"", error_list:[]};
   const url = `http://127.0.0.1:8000/api/consommation-journaliere`
   const columnDefs = [
     { headerName: "ID", field: "id",  maxWidth:100,minWidth:80, pinned: 'left' },
@@ -38,7 +38,7 @@ export default function ListeConsommationJournaliere() {
   ]
   return (
     <div style={{width:"100%"}}>
-        <Api nom='consommation-journaliere' tableNamePlu='Consommation-journaliere' tableNameSing='consommation-journaliere' url={url} initialValue={initialValue} columnDefs={columnDefs} columnDefsTrash={columnDefs}  show={show} createUpdate={createUpdate}/>  
+        <Api nom='consommation-journaliere' tableNamePlu='Consommation-journaliere' tableNameSing='consommation-journaliere' url={url} initialValue={initialValue} columnDefs={columnDefs} show={show} createUpdate={createUpdate}/>  
     </div>
   );
 }

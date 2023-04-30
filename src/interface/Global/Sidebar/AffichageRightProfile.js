@@ -10,15 +10,15 @@ export default function AffichageRightProfile({toggleDrawer}) {
   var fileName ="";
   if("auth_token" in localStorage){
     if(localStorage.getItem("Role")=== "administrateur"){
-          show1=[ ["Nom","nom"],  ["Prénom","prenom"], ["Carte d'identité nationnale","CIN"],  ["Numéro de téléphone","numero_telephone"], ["Email","email"], ["Adresse","adresse"],];
+          show1=[ ["Nom","nom"],  ["Prénom","prenom"], ["Carte d'identité nationnale","CIN"],  ["Numéro de téléphone","numero_telephone"], ["Email","email"],];
           user="administrateur";
           fileName="administrateur";
     }else if(localStorage.getItem("Role")=== "client"){
-          show1=[ ["Nom","nom"],  ["Prénom","prenom"],["Numéro de téléphone","numero_telephone"],["Numero fixe","numero_fixe"], ["Email","email"], ["Adresse","adresse"],];
+          show1=[ ["Nom","nom"],  ["Prénom","prenom"],["Numéro de téléphone","numero_telephone"],["Numero fixe","numero_fixe"], ["Email","email"],];
           user="client"
           fileName="client"
     }else if(localStorage.getItem("Role")=== "agent-maintenance"){
-          show1=[ ["Nom","nom"], ["Prénom","prenom"],  ["nom entreprise","nom_entreprise"], ["matricule fiscale","matricule_fiscale"],  ["Numéro de téléphone","numero_telephone"],["Numero fixe","numero_fixe"],["Email","email"], ["Adresse","adresse"],];
+          show1=[ ["Nom","nom"], ["Prénom","prenom"],  ["nom entreprise","nom_entreprise"], ["matricule fiscale","matricule_fiscale"],  ["Numéro de téléphone","numero_telephone"],["Numero fixe","numero_fixe"],["Email","email"]];
           user="agent-maintenance"
           fileName="agent-maintenance"
     }
