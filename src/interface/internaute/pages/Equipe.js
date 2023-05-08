@@ -65,14 +65,18 @@ function Equipe() {
           <div className='equipe-container' key={i.toString()}>
             {data.slice(i, i + sliderItems).map((da, index) => {
               return (
-              <div className='card' key={index.toString()} item={da}>
-                <h3>{da.travail}</h3>
+              <div className='card' key={index.toString()} item={da} style={{
+                padding:"2px 20px",border:"2px solid grey", borderRadius:"10px", fontSize:'0.8rem',
+                display: "flex",boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center"
+                 }}>
+                <h3 style={{ }}>{da.travail}</h3>
+                <h4>{da.nom}</h4>
                 <ul>
-                <img src={da.img} style={{ height: '200px', width: '200px' }} alt={`${da.nom}`} />
-                <li>Nom:  {da.nom}</li>
+                <img src={da.img} style={{width: '230px', height:"200px", margin:"0 auto" }} alt={`${da.nom}`} />
                     <li>Formation:  {da.formation}</li>
-                    <li>Expérience professionnelle:  {da.experience}</li>
-                    <li>Responsabilités:  {da.resp}</li>
                 </ul>
               </div>
               );
@@ -84,14 +88,12 @@ function Equipe() {
     return (
       <div id='equipe' className='inter-section'>
          <h1 className='title-internaute'>Notre équipe</h1> 
-         Nous sommes une équipe passionnée et engagée dans la mise en place de solutions intelligentes pour la gestion de l'énergie électrique. Nous avons des compétences variées dans les domaines de l'ingénierie, de la gestion de projet, de la communication et du marketing.
+        <p> 
+          Nous sommes une équipe passionnée et engagée dans la mise en place de solutions intelligentes pour la gestion de l'énergie électrique. Nous avons des compétences variées dans les domaines de l'ingénierie, de la gestion de projet, de la communication et du marketing.
+        </p>
         <Carousel indicators={false}>
           {items}
         </Carousel>
-        <h2>Joindre notre équipe</h2>
-        Si vous partagez nos valeurs et notre passion pour l'innovation et la durabilité, nous sommes intéressés à entendre parler de vous. Consultez notre page "Carrières" pour voir nos offres d'emploi actuelles et soumettez votre candidature.
- 
-        Notre équipe de travail est passionnée par notre mission de fournir de l'énergie fiable et durable à la Tunisie. Nous travaillons ensemble pour fournir les meilleurs services à nos clients et pour atteindre les objectifs de notre entreprise.
       </div>
       
     );

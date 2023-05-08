@@ -58,6 +58,7 @@ li{
 body{
     background: #ffffff;
     min-height: 100vh;
+    font-size: 1.1rem;
 }
 ::-webkit-scrollbar {
     width: 10px;
