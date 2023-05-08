@@ -18,7 +18,7 @@ export default function NotificationGestionnaire() {
                     secondary={
                         <React.Fragment>
                         <Typography  sx={{ display: 'inline' }}  component="span" variant="body2" color="text.primary">
-                            to Scott, Alex, Jennifer
+                            
                         </Typography>
                         <br/>
                         {"Wish I could come, but I'm out of town this…"}

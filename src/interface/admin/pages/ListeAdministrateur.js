@@ -30,7 +30,7 @@ export default function ListeAdministrateur() {
     { headerName: "ID", field: "id",  maxWidth:100,minWidth:80, pinned: 'left' },
     { headerName: "Photo", field: "photo", minWidth:80, maxWidth:110, cellRenderer: (params) =>
     <img  style={{height:"47px", width:"47px", borderRadius:"50%"}} 
-          src={`${process.env.REACT_APP_API_KEY}/images/administrateur/${params.data.photo}`} alt="administrateur"/>},
+          src={`http://127.0.0.1:8000/images/administrateur/${params.data.photo}`} alt="administrateur"/>},
     { headerName: "Nom", field: "nom", minWidth: 100 , maxWidth: 180 },
     { headerName: "Prénom ", field: "prenom", minWidth: 110 , maxWidth: 180 },
     { headerName: "CIN ", field: "CIN", minWidth: 120 , maxWidth: 180 },
@@ -39,7 +39,7 @@ export default function ListeAdministrateur() {
   ]
   return (
     <div style={{width:"100%"}}>
-        <Api nom='administrateur' tableNamePlu='Liste administrateurs' tableNameSing='Liste administrateurs' url={url} initialValue={initialValue} columnDefs={columnDefs} show={show} createUpdate={createUpdate}/>  
+        <Api nom='administrateur' tableNamePlu='Liste administrateurs' tableNameSing='Administrateur' url={url} initialValue={initialValue} columnDefs={columnDefs} show={show} createUpdate={createUpdate}/>  
     </div>
   );
 }

@@ -10,6 +10,7 @@ import DialogAddUpdate from './DialogAddUpdate';
 import DialogShow from './DialogShow';
 import Swal from 'sweetalert';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+
 export default function Api({nom,tableNameSing, tableNamePlu,initialValue, url, columnDefs, show, createUpdate}) {
   const [tableData, setTableData] = useState(null)
   const [open, setOpen] =useState(false);
@@ -153,8 +154,6 @@ export default function Api({nom,tableNameSing, tableNamePlu,initialValue, url, 
     let tableColumn;
     if(columnDefs[0].field==='id'){
         tableColumn=  columnDefs.concat(
-          // { headerName: "Crée le", field: "created_at", type: ['dateColumn', 'nonEditableColumn'], maxWidth: 200, minWidth:180 },
-          // { headerName: "modifié le", field: "updated_at", type: ['dateColumn', 'nonEditableColumn'], maxWidth: 200, minWidth:180  },
           { headerName: "Actions",sortable:false,filter:false,maxWidth: 160,minWidth: 150,pinned: 'right', cellRenderer: (params) => <div>
               <ButtonTable variant="outlined" className='tableIcon' color="warning" onClick={() => handleShow(params.data)} style={{marginRight:"2px"}}><VisibilityIcon/></ButtonTable>
               <ButtonTable variant="outlined" className='tableIcon' color="primary" onClick={() => handleUpdate(params.data)} style={{marginRight:"2px"}}><EditIcon/></ButtonTable>

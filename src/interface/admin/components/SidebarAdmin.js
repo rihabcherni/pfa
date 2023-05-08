@@ -3,7 +3,7 @@ import { BsTools,BsFillEnvelopeExclamationFill } from "react-icons/bs";
 import { ImStatsDots } from "react-icons/im";
 import { AiOutlineAreaChart } from "react-icons/ai";
 import { FaFileInvoiceDollar, FaMoneyCheck, FaMoneyBillWave, FaBolt, FaUser,FaUsers, FaHardHat} from "react-icons/fa";
-import { MdReportProblem } from "react-icons/md"
+import { MdReportProblem,MdNotificationsActive } from "react-icons/md"
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import ContactsIcon from '@mui/icons-material/Contacts';
 
@@ -21,6 +21,8 @@ export const SidebarAdmin = [
     {id: 9,name: "Gestion factures", path:"/administrateur/factures", icon: <FaFileInvoiceDollar/>, size:"meduim"},
     {id: 10,name: "Gestion paiements", path:"/administrateur/paiements", icon: <FaMoneyCheck/>, size:"meduim"},      
     {id: 11,name: "Pannes compteurs", path:"/administrateur/pannes-compteurs", icon: <MdReportProblem/>, size:"meduim"},
-    {id: 12,name: "Reclamation clients", path:"/administrateur/reclamation-clients", icon: <BsFillEnvelopeExclamationFill/>, size:"meduim"},
+    {id: 11,name: "Tous notifications", path:"/administrateur/tous-notifications", icon: <MdNotificationsActive/>, size:"meduim"},
+    {id: 12,name: "Réclamation des clients", path:"/administrateur/reclamation-clients", icon: <BsFillEnvelopeExclamationFill/>, size:"meduim"},
     {id:13, name: "Support",path:"/administrateur/support", icon: <ContactsIcon/>, size:"meduim"},
   ];
+  

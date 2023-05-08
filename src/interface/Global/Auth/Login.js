@@ -12,7 +12,6 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useNavigate } from "react-router-dom";
 import logo from '../../../assets/logo.svg'
 import loginImg from '../../../assets/user/internaute/login.jpg'
-axios.defaults.baseURL = `${process.env.REACT_APP_API_KEY}/api`;
 axios.defaults.withCredentials = true;
 
 const Login = () => {
@@ -39,11 +38,12 @@ const Login = () => {
       mot_de_passe: loginInput.mot_de_passe,
       recaptcha: loginRecaptcha,
     };
-      const response = await axios.post("/login", data);
+      const response = await axios.post("http://127.0.0.1:8000/api/login", data);
       if(response.data.token!=undefined){
         var role = response.data.Role;
         localStorage.setItem("auth_token", response.data.token);
         localStorage.setItem('Role',role);
+        localStorage.setItem('profile', JSON.stringify(response.data.details));
         axios.defaults.headers.common["Authorization"] = `Bearer ${response.data.token}`;
         axios.defaults.headers.common["Content-Type"] = `application/json`;
         window.location.reload();  
@@ -135,7 +135,7 @@ const Login = () => {
                 <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth> Se connecter </Button>
                 <Typography sx={{textAlign:"center"}}>
                   <Link href="/oublier-mot-de-passe" >
-                    Avez-vous oublier votre mot de passe ?
+                  Avez-vous oublié votre mot de passe ?
                   </Link>
                 </Typography>
               </form>

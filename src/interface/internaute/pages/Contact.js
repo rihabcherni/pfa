@@ -56,11 +56,11 @@ const contactSubmit = (e) => {
   return (
     <div id='contact' className='inter-section'>
       <h1 className='title-internaute'>Contact</h1> 
-      N'hésitez pas à nous contacter pour en savoir plus sur nos services et solutions. Notre équipe d'experts en énergie est à votre disposition pour répondre à toutes vos questions et vous aider à trouver les solutions les plus efficaces pour vos besoins.
       <div className='container-contact'>
-        <div>
-          Siège : Tunis<br/>
-          Adresse : 38 rue Kamel Ataturk 1080 Tunis
+        <div >
+        <p style={{ fontSize:'12px' }}>N'hésitez pas à nous contacter pour en savoir plus sur nos services et solutions. Notre équipe d'experts en énergie est à votre disposition pour répondre à toutes vos questions et vous aider à trouver les solutions les plus efficaces pour vos besoins.
+          <br/>Siège : Tunis<br/>
+          Adresse : 38 rue Kamel Ataturk 1080 Tunis</p>
           <MapContainer center={[ 36.80482172041758, 10.183193953004679]} zoom={13} style={containerStyle}>
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -136,6 +136,7 @@ const contactSubmit = (e) => {
                       </FormHelperText> 
                   </FormControl>
               </div>
+              <br/>
               <Button type='submit' variant="contained" sx={{float:"right"}}>
                 <Typography variant="button" style={{textTransform: 'capitalize'}}>
                   confirmer

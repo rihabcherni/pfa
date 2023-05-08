@@ -8,6 +8,7 @@ import Grid from '@mui/material/Grid';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import Button  from '@mui/material/Button'
+import { Typography } from '@mui/material';
 
 export const Item = styled(Paper)(({ theme }) => 
   (
@@ -46,7 +47,7 @@ export const columnTypes =  {
    },
  },
 }
-export  function Table({tableData, columnDefs}) {
+export  function Table({tableData, columnDefs, nom}) {
   const gridRef = useRef();
   const [gridApi, setGridApi] = useState(null)
   const onGridReady = (params) => {
@@ -68,6 +69,7 @@ return (
             <ManageSearchIcon variant="contained" color="success"  style={{marginBottom:"-5px"}} />
             <input type="text"  onInput={onQuickFilterChanged}  id="quickFilter"  placeholder="recherche..."  style={{backgroundColor:'#DCDCDC', border:'none',padding:"8px" }}/>
           </Item>
+          <Typography align="center" variant='h4' color="primary" sx={{margin:"25px 0", fontWeight:"bold"}}>{nom}</Typography>
           <Item  style={{margin:"20px ",backgroundColor:'#DCDCDC'}}>
                   <select style={{marginRight:'5px' , padding:"10px" , borderRadius:"5px",border:"none"}}  onChange={(e)=>onPaginationChange(e.target.value)}>
                     <option value='5'>5</option>

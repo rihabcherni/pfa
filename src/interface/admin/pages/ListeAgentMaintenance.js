@@ -30,7 +30,7 @@ export default function ListeAgentMaintenance() {
     { headerName: "ID", field: "id",  maxWidth:100,minWidth:80, pinned: 'left' },
     { headerName: "Photo", field: "photo", minWidth:80, maxWidth:110, cellRenderer: (params) =>
     <img  style={{height:"47px", width:"47px", borderRadius:"50%"}} 
-          src={`${process.env.REACT_APP_API_KEY}/images/agentMaintenance/${params.data.photo}`} alt="agent-maintenance"/>},
+          src={`http://127.0.0.1:8000/images/agentMaintenance/${params.data.photo}`} alt="agent-maintenance"/>},
     { headerName: "Nom", field: "nom", minWidth: 100 , maxWidth: 180 },
     { headerName: "Prénom ", field: "prenom", minWidth: 110 , maxWidth: 180 },
     { headerName: "CIN ", field: "CIN", minWidth: 120 , maxWidth: 180 },

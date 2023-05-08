@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
-    padding: theme.spacing(2),
+    padding: theme.spacing(5),
   },
   '& .MuiDialogActions-root': {
     padding: theme.spacing(1),
@@ -19,7 +19,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 const BootstrapDialogTitle = (props) => {
   const { children, onClose, ...other } = props;
   return (
-    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+    <DialogTitle sx={{ m: 0, p: 2}} {...other}>
       {children}
       {onClose ? (
         <IconButton aria-label="close" onClick={onClose} sx={{position: 'absolute',right: 8,top: 8,color: (theme) => theme.palette.grey[500]}}>
@@ -29,38 +29,42 @@ const BootstrapDialogTitle = (props) => {
     </DialogTitle>
   );
 };
-BootstrapDialogTitle.propTypes = { children: PropTypes.node, onClose: PropTypes.func.isRequired,};
-export default function DialogShow({nom,tableName,open,handleClose,data, show}) {
 
-  let rows = [];
+BootstrapDialogTitle.propTypes = { children: PropTypes.node, onClose: PropTypes.func.isRequired,};
+
+export default function DialogShow({tableName, open, handleClose, data, show, nom}) {
+
+  let photo = null;
+  let attributes = [];
   for (let i = 0; i < show.length; i++) {
     if(show[i][0]==="photo"){
-      rows.push(
-        <img style={{height:"200px", width:"200px", borderRadius:"50%"}} 
-        src={`${process.env.REACT_APP_API_KEY}/storage/images/${data[show[i][0]]}`} alt="image"/>
+      photo = (
+        <img style={{height:"200px", width:"200px", borderRadius:"50%", marginRight:"20px"}} 
+        src={`http://127.0.0.1:8000/images/${nom}/${data[show[i][0]]}`} alt="images"/>
+      );
+    } else {
+      attributes.push(
+        <li key={i} style={{fontSize:"17px"}}>
+          <b style={{color:"blue"}}>{show[i][0]}: </b>
+          {data[show[i][1]]}
+        </li>
       );
     }
   }
   return (
     <div>
-      <BootstrapDialog onClose={handleClose} aria-labelledby="alert-dialog-title" maxWidth='md'
+      <BootstrapDialog onClose={handleClose} aria-labelledby="alert-dialog-title" maxWidth='sm'
         open={open} aria-describedby="alert-dialog-description" fullWidth> 
-        <BootstrapDialogTitle id="alert-dialog-title" onClose={handleClose} sx={{fontWeight: "700",fontSize:"30px", backgroundColor: 'white', textAlign:"center", color:"green"}}>
-          Affichage des données {tableName}
+        <BootstrapDialogTitle id="alert-dialog-title" onClose={handleClose} sx={{backgroundColor:"lightblue",fontWeight: "bold",fontSize:"30px", textAlign:"center", color:"blue"}}>
+          {tableName}
         </BootstrapDialogTitle>
         <DialogContent sx={{backgroundColor: 'white'}}>
-          <div>{rows}</div> 
-          <ul style={{columnWidth: "350px"}}>
-            {show.length!==0?(show.map((sh, key) =>   
-              (( sh[1]!=="photo" && sh[1]!=="qrcode"  && sh[1]!=="mot_de_passe")?(
-                <li key={key} style={{fontSize:"17px"}}>
-                  <b style={{color:"green"}}>{sh[0]}: </b>
-                  {data[sh[1]]}
-                </li>
-                ): null)
-            )):null
-            }
-          </ul>     
+          <div style={{display:"flex"}}>
+            {photo}
+            <ul style={{columnWidth: "350px"}}>
+              {attributes}
+            </ul>
+          </div>
         </DialogContent>
       </BootstrapDialog>
     </div>

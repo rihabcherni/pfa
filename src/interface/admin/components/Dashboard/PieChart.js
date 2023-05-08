@@ -8,7 +8,7 @@ const Piechart = () => {
     const [zones, setZones] = useState([])
     useEffect(() => {
         ;(async function getStatus() {
-        const response = await fetch(`${process.env.REACT_APP_API_KEY}/api/zone-travail`)
+        const response = await fetch(`http://127.0.0.1:8000/api/zone-travail`)
         const json = await response.json()
         setTimeout(getStatus, 60000)
         setZones(json.data)
@@ -27,14 +27,15 @@ const Piechart = () => {
     };
     return (
         <div>
-            <Card>
-                <Container> <StyledTypography>Quantitées collectées totales par mois/année</StyledTypography></Container>
+            {/* <Card>
+                <Container> 
+                    <StyledTypography>Quantitées collectées totales par mois/année</StyledTypography></Container>
                   <Pie data={data} 
                     options={{ 
                         responsive: true, plugins: { legend: { position: 'left', display: true}},
                     }}
                 />
-            </Card>
+            </Card> */}
         </div>
     );
 }

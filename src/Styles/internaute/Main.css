@@ -27,10 +27,13 @@
 
     .container-carousel {
         position: relative;
-        color: rgb(4, 43, 79);
+        color: rgb(11, 11, 97);
         height: 89.7vh;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+    .text-carousel{
+        color:rgb(54, 54, 219);
     }
     .center-carousel{
       z-index: 1;

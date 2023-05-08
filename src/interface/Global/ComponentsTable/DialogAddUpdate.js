@@ -9,9 +9,14 @@ import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
+const StyledButton = styled(Button)(({ theme }) => ({
+  '&:hover': {
+    backgroundColor: 'red', // Remplacez la couleur par celle souhaitée
+  },
+}));
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
-    padding: theme.spacing(2),
+    padding: theme.spacing(0),
   },
   '& .MuiDialogActions-root': {
     padding: theme.spacing(1),
@@ -44,13 +49,28 @@ export default function DialogAddUpdate({tableName,open,handleClose,data,onChang
           <FormHelperText error={true}> {validation[createUpdate[i][0]]}</FormHelperText> 
         </>
       );
-    }else{   
+    }else if(createUpdate[i][1]!=="mot_de_passe" ){   
         rows.push(
           <>
-            <TextField id={createUpdate[i][1]} value={data[createUpdate[i][1]]}  onChange={e=>onChange(e)} placeholder={createUpdate[i][0]} error={!!validation[createUpdate[i][1]]} label={createUpdate[i][0]} variant="outlined" margin="dense" fullWidth />
-            <FormHelperText error={true}>
-              {validation[createUpdate[i][1]]}        
-            </FormHelperText>  
+        <TextField 
+  id={createUpdate[i][1]} 
+  value={data[createUpdate[i][1]]}  
+  onChange={e=>onChange(e)} 
+  error={!!validation[createUpdate[i][1]]} 
+  label={createUpdate[i][0]} 
+  variant="outlined" 
+  margin="dense" 
+  fullWidth 
+  InputProps={{
+    style: { borderRadius: '5px' },
+  }}
+  InputLabelProps={{
+    style: { color: 'blue' }
+  }}
+/>
+<FormHelperText error={true}>
+  {validation[createUpdate[i][1]]}        
+</FormHelperText>
           </>
         ); 
     }
@@ -58,20 +78,20 @@ export default function DialogAddUpdate({tableName,open,handleClose,data,onChang
   return (
     <div>
       <BootstrapDialog onClose={handleClose} aria-labelledby="alert-dialog-title" open={open} aria-describedby="alert-dialog-description" fullWidth sx={{ marginTop:'50px' }}>
-        <BootstrapDialogTitle id="alert-dialog-title" onClose={handleClose} sx={{fontWeight: "400",fontSize:"30px", backgroundColor: 'white', textAlign:"center", color:"green"}}>
-          {id?"modifier des données ":"créer un nouveau "} {tableName}
+      <BootstrapDialogTitle id="alert-dialog-title" onClose={handleClose} sx={{backgroundColor:"lightblue",fontWeight: "bold",fontSize:"30px", textAlign:"center", color:"blue"}}>
+          {id?"Modifier données ":"Ajouter un nouveau "} {tableName}
         </BootstrapDialogTitle>
 
         <DialogContent sx={{backgroundColor: 'white' }}>
-          <form encType="multipart/form-data"   style={{columnWidth: "200px"}}>     
+          <form encType="multipart/form-data" style={{columnWidth: "200px", margin:"20px"}}>     
               {rows}            
           </form>   
         </DialogContent>
 
-        <DialogActions sx={{backgroundColor: 'white'}}>
-          <Button sx={{color:"white",backgroundColor: 'blue',width:"150px", margin:"0px 50px 15px"}} color="success" onClick={()=>handleFormSubmit()} variant="contained">
-            {id?"modifier":"envoyer"}
-          </Button>
+        <DialogActions sx={{backgroundColor: 'lightblue'}}>
+        <StyledButton sx={{color:"white",backgroundColor: 'blue',width:"150px", margin:"8px 20px"}} onClick={()=>handleFormSubmit()} variant="contained" className='button'>
+          {id?"modifier":"envoyer"}
+        </StyledButton>
         </DialogActions>
       </BootstrapDialog>
     </div>

@@ -38,7 +38,7 @@ function AdminLink() {
         <Route path="reclamation-clients" element={ <ListeReclamation/>}/>
         <Route path="pannes-compteurs" element={ <PanneCompteurs/>}/>
         <Route path="support" element={ <Support/>}/>  
-        <Route path="notification" element={ <NotificationAdmin/>}/>
+        <Route path="tous-notifications" element={ <NotificationAdmin/>}/>
         <Route path='modifier-mot-de-passe' element={<ModifierPassword/>}></Route>
         <Route path='profile' element={<Profile/>}></Route>
       </Route>

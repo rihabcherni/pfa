@@ -7,8 +7,7 @@ import Carousel from 'react-material-ui-carousel'
 function Item(props){
   return (<div className='container-carousel' style={{ backgroundImage:`url(${props.item.image})` }}>
             <div className='center-carousel'>
-              <h1 className='title-acceuil'>Accueil</h1> 
-              <h3>Bienvenue sur notre site <b>  SMART WATTS</b> dédié à la gestion d'energie électrique avec des compteurs intelligente.</h3> 
+              <h2>Bienvenue sur notre site <b>  SMART WATTS</b> dédié à la gestion d'energie électrique avec des compteurs intelligents.</h2> 
               <br/>
               <h4 className='text-carousel'>{props.item.text}</h4> 
             </div>

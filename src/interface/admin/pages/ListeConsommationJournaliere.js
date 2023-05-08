@@ -2,7 +2,7 @@ import React from 'react';
 import Api from '../../Global/ComponentsTable/Api';
  const createUpdate=[
   ["ID","id"],
-  ["compteur_intelligente_id","compteur_intelligente_id"],
+  ["compteur_intelligent_id","compteur_intelligent_id"],
   ["tranche_id","tranche_id"],
   ["date_consommation","date_consommation"],
   ["prix_unitaire_kilowatt","prix_unitaire_kilowatt"],
@@ -12,7 +12,7 @@ import Api from '../../Global/ComponentsTable/Api';
  ];
  const show=[
   ["ID","id"],
-  ["compteur_intelligente_id","compteur_intelligente_id"],
+  ["compteur_intelligent_id","compteur_intelligent_id"],
   ["tranche_id","tranche_id"],
   ["date_consommation","date_consommation"],
   ["prix_unitaire_kilowatt","prix_unitaire_kilowatt"],
@@ -28,7 +28,7 @@ export default function ListeConsommationJournaliere() {
   const url = `http://127.0.0.1:8000/api/consommation-journaliere`
   const columnDefs = [
     { headerName: "ID", field: "id",  maxWidth:100,minWidth:80, pinned: 'left' },
-    { headerName: "compteur_intelligente_id", field: "compteur_intelligente_id", minWidth: 150 , maxWidth: 400 },
+    { headerName: "compteur_intelligent_id", field: "compteur_intelligent_id", minWidth: 150 , maxWidth: 400 },
     { headerName: "tranche_id", field: "tranche_id", minWidth: 150 , maxWidth: 400 },
     { headerName: "date_consommation", field: "date_consommation", minWidth: 150 , maxWidth: 400 },
     { headerName: "prix_unitaire_kilowatt", field: "prix_unitaire_kilowatt", minWidth: 150 , maxWidth: 400 },

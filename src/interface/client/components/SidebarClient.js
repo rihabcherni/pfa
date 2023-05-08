@@ -11,5 +11,5 @@ export const SidebarClient = [
     {id: 4,name: "Gestion des factures", path:"/client/factures", icon: <FaFileInvoiceDollar/>, size:"meduim"},
     {id: 5,name: "Gestion des paiements", path:"/client/paiements", icon: <FaMoneyCheck/>, size:"meduim"},      
     {id: 6,name: "Pannes compteurs", path:"/client/historique-pannes-compteurs", icon: <MdReportProblem/>, size:"meduim"},
-    {id: 7,name: "Reclamation clients", path:"/client/reclamation", icon: <BsFillEnvelopeExclamationFill/>, size:"meduim"},
+    {id: 7,name: "Réclamation des clients", path:"/client/reclamation", icon: <BsFillEnvelopeExclamationFill/>, size:"meduim"},
   ];
